@@ -13,14 +13,17 @@
 			1) cos.jar 방식
 			 - MultipartRequest을 이용한 파일 업로드, 가장 많이 알려진 방식
 			 - 너무 오래된 라이브러리로 버전 지원을 하지 않아 최신 Java17에서 이슈발생
+			 - cos.jar 외부 라이브러리 포함
 			 
 			2) apache-fileupload 방식
 			 - apache 오픈소스로 제공되는 파일업로드 라이브러리
-			 - Java 지원 재단이 Javax에서 Jakarta로 변경되어 너무 잦은 버전변경으로 호환성 부족
+			 - Java 지원 재단이 Javax(Oracle)에서 Jakarta(Eclipse Foundation)로 변경되어 너무 잦은 버전변경으로 호환성 부족
+			 - apache-commons-fileupload 외부 라이브러리 포함
 			
 			3) WAS의 part 방식
 			 - Tomcat9 버전부터 지원되는 파일 업로드 방식
 			 - 업로드 파일을 part 객체로 처리됨
+			 - 별도의 외부 라이브러리 필요없음
 			
 			WAS의 getPart 업로드 설정
 			 - Server > context.xml > context 태그 allowCasualMultipartParsing="true" 속성 선언
