@@ -5,9 +5,6 @@
 <%@page import="javax.naming.Context"%>
 <%@page import="java.io.File"%>
 <%@page import="java.util.UUID"%>
-<%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
-<%@page import="com.oreilly.servlet.MultipartRequest"%>
-<%@page import="org.apache.commons.fileupload2.jakarta.servlet6.JakartaServletFileUpload"%>
 <%@page import="org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
