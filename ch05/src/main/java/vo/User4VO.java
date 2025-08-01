@@ -23,6 +23,12 @@ public class User4VO {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	public void setAge(String age) {
+		
+		if(age != null) {			
+			this.age = Integer.parseInt(age);						
+		}		
+	}
 	public String getAddr() {
 		return addr;
 	}

@@ -3,10 +3,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>user2::list</title>
+		<title>user3::list</title>
 	</head>
 	<body>
-		<h3>User2 목록</h3>
+		<h3>User3 목록</h3>
 		
 		<a href="../jabc.jsp">처음으로</a>
 		<a href="./list.jsp">목록이동</a>

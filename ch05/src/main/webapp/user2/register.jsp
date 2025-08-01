@@ -8,7 +8,7 @@
 	<body>
 		<h3>User2 목록</h3>
 		
-		<a href="../jabc.jsp">처음으로</a>
+		<a href="../jdbc.jsp">처음으로</a>
 		<a href="./list.jsp">목록이동</a>
 		
 		<form action="./proc/register.jsp" method="post">
