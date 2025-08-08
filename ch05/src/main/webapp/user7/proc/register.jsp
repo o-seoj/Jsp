@@ -7,9 +7,8 @@
 <%
 
 	String name = request.getParameter("name");
-	String gender = request.getParameter("gender");
 	String age = request.getParameter("age");
-	String addr = request.getParameter("addr");
+	String email = request.getParameter("email");
 	
 	try{
 		Context initCtx = new InitialContext();
@@ -18,12 +17,11 @@
 		
 		Connection conn = ds.getConnection();
 		
-		String sql = "INSERT INTO USER6 VALUES (SEQ_USER6.NEXTVAL, ?, ?, ?, ?)";
+		String sql = "INSERT INTO USER7(NAME, AGE, EMAIL)VALUES (?, ?, ?)";
 		PreparedStatement psmt = conn.prepareStatement(sql);
 		psmt.setString(1, name);
-		psmt.setString(2, gender);
-		psmt.setInt(3, Integer.parseInt(age));
-		psmt.setString(4, addr);
+		psmt.setInt(2, Integer.parseInt(age));
+		psmt.setString(3, email);
 
 		
 		psmt.executeUpdate();

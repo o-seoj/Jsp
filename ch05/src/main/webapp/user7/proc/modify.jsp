@@ -5,11 +5,10 @@
 <%@page import="javax.naming.Context"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	String seq = request.getParameter("seq");
+	String id = request.getParameter("id");
 	String name = request.getParameter("name");
-	String gender = request.getParameter("gender");
 	String age = request.getParameter("age");
-	String addr = request.getParameter("addr");
+	String email = request.getParameter("email");
 	
 	try{
 		Context initCtx = new InitialContext();
@@ -18,13 +17,12 @@
 		
 		Connection conn = ds.getConnection();
 		
-		String sql = "UPDATE USER6 SET NAME=?, GENDER=?, AGE=?, ADDR=? WHERE SEQ=?";
+		String sql = "UPDATE USER7 SET NAME=?, AGE=?, EMAIL=? WHERE ID=?";
 		PreparedStatement psmt = conn.prepareStatement(sql);
 		psmt.setString(1, name);
-		psmt.setString(2, gender);
-		psmt.setString(3, age);
-		psmt.setString(4, addr);
-		psmt.setString(5, seq);
+		psmt.setInt(2, Integer.parseInt(age));
+		psmt.setString(3, email);
+		psmt.setInt(4, Integer.parseInt(id));
 
 
 		

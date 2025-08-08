@@ -22,8 +22,14 @@
 		<a href="/ch09/welcome.do">welcome</a>
 		<a href="/ch09/greeting.do">greeting</a>
 		
-		<h4>USER1 CRUD</h4>
-		<a href="/ch09/user1/list.do">user1 목록</a>
+		<h4>USER CRUD</h4>
+		<a href="/ch09/user1/list.do">user1 목록</a><br/>
+		<a href="/ch09/user2/list.do">user2 목록</a><br/>
+		<a href="/ch09/user3/list.do">user3 목록</a><br/>
+		<a href="/ch09/user4/list.do">user4 목록</a><br/>
+		<a href="/ch09/user5/list.do">user5 목록</a><br/>
+		<a href="/ch09/user6/list.do">user6 목록</a><br/>
+		<a href="/ch09/user7/list.do">user7 목록</a>
 		
 		
 	</body>

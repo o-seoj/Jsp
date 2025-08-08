@@ -7,7 +7,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	// 전송 데이터 수신
-	String seq = request.getParameter("seq");
+	String id = request.getParameter("id");
 	
 	try {	
 		Context ctx = (Context) new InitialContext().lookup("java:comp/env");				
@@ -15,8 +15,8 @@
 
 		Connection conn = ds.getConnection();
 		
-		PreparedStatement psmt = conn.prepareStatement("DELETE FROM USER6 WHERE SEQ = ?");
-		psmt.setInt(1, Integer.parseInt(seq));
+		PreparedStatement psmt = conn.prepareStatement("DELETE FROM USER7 WHERE ID = ?");
+		psmt.setInt(1, Integer.parseInt(id));
 		
 		psmt.executeUpdate();
 		
@@ -27,5 +27,5 @@
 		e.printStackTrace();
 	}
 	
-	response.sendRedirect("/ch05/user6/list.jsp");
+	response.sendRedirect("/ch05/user7/list.jsp");
 %>

@@ -1,11 +1,11 @@
-<%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="java.sql.PreparedStatement"%>
 <%@page import="javax.sql.DataSource"%>
 <%@page import="javax.naming.InitialContext"%>
 <%@page import="javax.naming.Context"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-
+	String seq = request.getParameter("seq");
 	String name = request.getParameter("name");
 	String gender = request.getParameter("gender");
 	String age = request.getParameter("age");
@@ -18,12 +18,14 @@
 		
 		Connection conn = ds.getConnection();
 		
-		String sql = "INSERT INTO USER6 VALUES (SEQ_USER6.NEXTVAL, ?, ?, ?, ?)";
+		String sql = "UPDATE USER6 SET NAME=?, GENDER=?, AGE=?, ADDR=? WHERE SEQ=?";
 		PreparedStatement psmt = conn.prepareStatement(sql);
 		psmt.setString(1, name);
 		psmt.setString(2, gender);
 		psmt.setInt(3, Integer.parseInt(age));
 		psmt.setString(4, addr);
+		psmt.setInt(5, Integer.parseInt(seq));
+
 
 		
 		psmt.executeUpdate();
@@ -31,10 +33,9 @@
 		psmt.close();
 		conn.close();
 		
-		
 	}catch(Exception e){
 		e.printStackTrace();
 	}
-		response.sendRedirect("../list.jsp");
-	
+	response.sendRedirect("../list.jsp");
+
 %>
