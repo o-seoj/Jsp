@@ -41,7 +41,7 @@
     	maxWaitMillis="3000"
     />
     
-        <Resource
+    <Resource
     	name="jdbc/shopERD"
     	auth="Container"
     	type="javax.sql.DataSource"
@@ -53,7 +53,30 @@
     	maxIdle="13"
     	maxWaitMillis="3000"
     />
-    
+    <Resource
+    	name="jdbc/collegeERD"
+    	auth="Container"
+    	type="javax.sql.DataSource"
+    	driverClassName="oracle.jdbc.driver.OracleDriver"
+    	url="jdbc:oracle:thin:@localhost:1521:xe"
+    	username="collegeERD"
+    	password="1234"
+    	maxTotal="13"
+    	maxIdle="13"
+    	maxWaitMillis="3000"
+    />
+    <Resource
+    	name="jdbc/bankERD"
+    	auth="Container"
+    	type="javax.sql.DataSource"
+    	driverClassName="oracle.jdbc.driver.OracleDriver"
+    	url="jdbc:oracle:thin:@localhost:1521:xe"
+    	username="bankERD"
+    	password="1234"
+    	maxTotal="13"
+    	maxIdle="13"
+    	maxWaitMillis="3000"
+    />
      <Resource
     	name="jdbc/shop"
     	auth="Container"
