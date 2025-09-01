@@ -23,8 +23,8 @@ public class User1Service {
 	private User1DAO dao = User1DAO.getInstance();	
 	
 	// DAO 메서드 호출 - Service에 맞게 네이밍
-	public void register(User1DTO dto) {
-		dao.insertUser1(dto);
+	public int register(User1DTO dto) {
+		return dao.insertUser1(dto);
 	}	
 	public User1DTO findById(String user_id) {
 		return dao.selectUser1(user_id);

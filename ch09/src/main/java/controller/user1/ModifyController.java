@@ -54,9 +54,6 @@ public class ModifyController extends HttpServlet {
 		service.modify(dto);
 		
 		// 이동
-		resp.sendRedirect("/ch09/user1/list.do");
-		
-	}
-	
-	
+		resp.sendRedirect("/ch09/user1/list.do");		
+	}	
 }
