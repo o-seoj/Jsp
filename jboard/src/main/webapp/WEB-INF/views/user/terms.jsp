@@ -22,8 +22,8 @@
         </table>
         
         <div>
-            <a href="./login.html" class="btn btnCancel">취소</a>
-            <a href="./register.html" class="btn btnNext">다음</a>
+            <a href="/jboard/user/login.do" class="btn btnCancel">취소</a>
+            <a href="/jboard/user/register.do" class="btn btnNext">다음</a>
         </div>
 
     </section>
