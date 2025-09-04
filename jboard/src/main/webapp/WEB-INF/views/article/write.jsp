@@ -5,16 +5,17 @@
         <nav>
             <h1>글쓰기</h1>
         </nav>
-        <form action="#">
+        <form action="/jboard/article/write.do" method="post" enctype="multipart/form-data">
+        	<input type="hidden" name="writer" readonly value="${sessUser.usid}">
             <table border="0">                        
                 <tr>
                     <th>제목</th>
-                    <td><input type="text" name="title" placeholder="제목을 입력하세요."/></td>
+                    <td><input type="text" name="title" required="required" placeholder="제목을 입력하세요."/></td>
                 </tr>
                 <tr>
                     <th>내용</th>
                     <td>
-                        <textarea name="content"></textarea>
+                        <textarea name="content" required="required"></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -30,7 +31,7 @@
             </table>
             
             <div>
-                <a href="./list.html" class="btn btnCancel">취소</a>
+                <a href="/jboard/article/list.do" class="btn btnCancel">취소</a>
                 <input type="submit" value="작성완료" class="btn btnComplete"/>
             </div>
         </form>
