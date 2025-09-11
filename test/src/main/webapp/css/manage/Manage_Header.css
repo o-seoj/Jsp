@@ -1,0 +1,48 @@
+/* 헤더 CSS */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px "Noto Sans Korean", sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    }
+
+.nav {
+    background-color: #00518C;
+    display: flex;
+    width: 100%;
+    padding: 4px 0;
+    }
+
+.navItem {
+    width: 100%;
+    max-width: 1400px;
+    padding: 4px 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    }
+
+.navItem > div > a {
+    color: #fff;
+    text-decoration: none; /*밑줄제거*/
+}
+
+.navItem > div + div {
+    border-left: 1px solid #fff; /* 왼쪽에 흰색 선 추가 */
+    padding-left: 8px; /* 구분선과 글자 사이 간격 추가 */
+    margin-left: 8px; /* 구분선과 이전 글자 사이 간격 추가 */
+}
+
+
+.header_bar {
+    background-color: #1F2838;
+    display: flex;
+    width: 100%;
+    padding: 4px 0;
+    }
+
+.header_bar article {
+    margin-left: 100px; /* 좌측에서 멀어지기 */
+}
+

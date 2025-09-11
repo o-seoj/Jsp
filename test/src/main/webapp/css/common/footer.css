@@ -1,0 +1,120 @@
+/* =============== 푸터 CSS =============== */
+footer {
+    height: 200px;
+    flex-shrink: 0;  /* 푸터 크기 고정 */
+    background-color: #19202D; 
+    color: #a8a9ac;
+}
+/* terms 부분 */
+footer > div:nth-child(1){ 
+    background:#202839;
+    box-sizing: border-box;
+}
+/* 맨 아래 info 부분 */
+footer > div:nth-child(2){ 
+    height:200px; 
+    background:#1a202d;
+ }
+/* ----- 바 전체 ----- */
+footer .terms {
+    width: 1200px;   /* 고정 */
+    margin: 0 auto;
+    display: flex; /* 메뉴들을 가로로 나열 */
+
+}
+
+/* 각 칸: 정확히 240×50, 포지셔닝 기준 제공 */
+footer .terms li {
+  flex: 0 0 240px;  /* 고정 크기 */
+  height: 50px;
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+/* ----- util 선 스타일  */
+/* 꼭 필요한 선만 선택해서 공통 스타일 적용 */
+footer .terms li:first-child::before, /* 첫 번째 칸의 왼쪽 선 */
+footer .terms li::after {             /* 모든 칸의 오른쪽 선 */
+    content: '';
+    display: block;
+    width: 2px;
+    height: 20px;
+    background-color: #626874;
+
+    /* 선을 세로 중앙에 배치하는 공식 (이건 꼭 있어야 해!) */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 첫 번째 칸의 왼쪽 선 위치 지정 */
+footer .terms li:first-child::before {
+    left: 0;
+}
+
+/* 모든 칸의 오른쪽 선 위치 지정 */
+footer .terms li::after {
+    right: 0;
+} 
+/* util 선 스타일 끝----- */
+
+footer .terms li a {
+    width:100%; height:100%;
+    font-size: 15px;
+    color:#fff; 
+
+    display: block; /* 박스 전체가 클릭되도록 링크 영역을 li 전체로 확장 */
+    padding: 15px 30px; /* 위아래 및 좌우 여백으로 간격 조절 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+footer .footer-inner {
+    width: 1200px;
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    align-items: flex-start;  /* 상단 정렬 */
+    position: relative;       /* 기준점 */
+}
+/* ----- 푸터 로고 --- */
+footer .footer-logo {
+    flex: 0 0 200px;
+    margin-top: 50px;
+}
+footer .footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+/* ----- 푸터 info ------ */
+footer .info p {
+    color: #a8a9ac;
+    font-size: 12px;
+    margin-top: 50px;
+    width: 600px;        /* 원하는 고정 폭 지정 */
+    flex-shrink: 0;      /* 부모 flex에 의해 줄어들지 않도록 고정 */
+}
+
+/* ----- 푸터 오른쪽 검색박스 ----- */
+footer .footer-tools{
+    position: absolute;    /* footer-inner를 기준으로 위치 고정 */
+    top: 55px;             /* 상단에서 35px 떨어짐*/
+    left: 1000px;          /* 왼쪽에서 1000px 떨어짐 */
+    
+}
+footer .footer-tools select {
+    width: 200px;
+    height: 36px;
+    background: #131721          /* 배경색 및 화살표 */
+                url(/images/bg-related-arr-open.png) 
+                no-repeat right 
+                10px 
+                center;
+    color: #a8a9ac;             /* 글자색 (흰색) */
+    border: 1px solid #131721;  /* 테두리 (디자인 맞게 수정 가능) */
+    border-radius: 4px;           /* 모서리 둥글기 */
+    padding: 0 10px;              /* 좌우 여백 */
+    font-size: 14px;              /* 글자 크기 */
+    appearance: none;             /* 기본 화살표 없애기 (브라우저마다 다름) */
+    outline: none;
+    cursor: pointer;
+}

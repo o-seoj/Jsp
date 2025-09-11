@@ -1,0 +1,554 @@
+    /* board 레이아웃 */
+    .board{
+        flex-direction: column;
+    }
+    
+    /* board 본문 레이아웃 */
+    .boardLower{
+        width: 100%;
+        height: auto;
+    }
+
+    .sbTitle{
+        width: auto;
+    }
+
+    .boardUpper{
+        margin-bottom: 30px;
+    }
+
+    /*========== 상단 바  ==========*/
+    /* 상단바 전체 */
+    .top-bar {
+    position: relative;
+    width: 100%;
+    height: 42px;
+    background-color: rgba(236,242,246,1);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    box-sizing: border-box;
+        position: relative; 
+    }
+
+    .top-bar-content {
+    width: 1200px;       /* 고정 폭 */
+    display: flex;
+    justify-content: flex-end;
+    gap: 14.6px;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;      /* 좌우 중앙 정렬 */
+    }
+
+    /* 상단바 텍스트 */
+    .sidebar-text {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 350;
+        font-style: DemiLight;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #000;
+    }
+    .tableHeader{
+    width: 930px;
+    height: 24px;
+    display: flex;
+    margin-bottom: 6px;
+    }
+
+    .tableHeader h4{
+        margin: 0;
+        background: url(../../images/bullet-h4.png) no-repeat left center;
+        padding-left: 8px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.2;
+        display: inline-block;
+        color: #145074;
+    }
+
+    th,td{
+        border-bottom: 1px solid #dedede;   /* 가로줄 */
+        border-right: 1px solid #dedede;    /* 세로줄 */
+    }
+
+    /* 마지막 행/열은 선 제거 (겉선 없애기) */
+    th:last-child, td:last-child{
+        border-right: none;
+    }
+
+    thead th{
+        height: 50px;
+        background-color: #f4f8fc;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 550;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+    }
+     tbody td {
+        border-bottom: 1px solid #ddd;
+        height: 50px;
+        padding: 12px 10px;
+        text-align: center;  
+        font-size: 14px;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 350;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+    }    
+
+    /* 교과과정 */
+
+    .major{
+    border-top: 2px solid #071F4B;
+    border-collapse: collapse;
+    width: 930px;
+    height: auto;
+    margin:0 0 50px 0;
+    table-layout: fixed;
+    }
+    .selection{
+    border-top: 2px solid #071F4B;
+    border-collapse: collapse;
+    width: 930px;
+    height: auto;
+    table-layout: fixed;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+    }
+    
+    .major thead th:nth-child(1) { width: 15%; }  
+    .major thead th:nth-child(2) { width: 15%; }  
+    .major thead th:nth-child(3) { width: 15%; }  
+    .major thead th:nth-child(4) { width: 40%; }  
+    .major thead th:nth-child(5) { width: 15%; }  
+
+    .selection thead th:nth-child(1) { width: 15%; }  
+    .selection thead th:nth-child(2) { width: 15%; }  
+    .selection thead th:nth-child(3) { width: 15%; }  
+    .selection thead th:nth-child(4) { width: 40%; }  
+    .selection thead th:nth-child(5) { width: 15%; }  
+
+    /* 수강신청내역 */
+    .regTable{
+    border-top: 2px solid #071F4B;
+    border-collapse: collapse;
+    width: 930px;
+    height: auto;
+    table-layout: fixed;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+    }
+
+ .selectYear{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    
+    width: 100px;
+    height: 40px;
+    padding: 6px;
+    margin-right: 5.6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: 350;
+    color: #666;
+    background: url('../../images/btn-sel-open01.png') no-repeat right 8px center; 
+}
+ .selectSem{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    width: 50px;
+    height: 40px;
+    padding: 6px;
+    margin: 0 5.6px 0 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    font-weight: 350;
+    color: #666;
+    background: url('../../images/btn-sel-open01.png') no-repeat right 8px center; 
+}
+
+    .regTable th{
+        height: 50px;
+        background-color: #fafafa;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 550;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+        border-right: none;
+    }
+
+    .regTable td{
+        border-right: none;
+        height: 66px;
+    }
+
+    .searchingField{
+    display: flex;
+    align-items: center;
+    margin:30px 0 15px 0;
+    justify-content: flex-start;
+}
+
+.regTable button{
+    background-color: #092E71;
+    width: 63.53px;
+    height: 29px;
+    color: #FFFFFF;;
+    font-weight: 350;
+    font-size: 14px;
+    border: none;
+}
+
+.regTable thead{
+    height: 85px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.recordPhrase{
+    margin-left: auto;
+    font-size: 18.7px;
+    font-weight: 700;
+    color: #333;
+}
+    
+
+    .regTable thead th:nth-child(1) { width: 10.6%; }  
+    .regTable thead th:nth-child(2) { width: 14.6%; }  
+    .regTable thead th:nth-child(3) { width: 10.6%; }  
+    .regTable thead th:nth-child(4) { width: 10.6%; }  
+    .regTable thead th:nth-child(5) { width: 10.6%; }  
+    .regTable thead th:nth-child(6) { width: 10.6%; }  
+    .regTable thead th:nth-child(7) { width: 10.6%; }  
+    .regTable thead th:nth-child(8) { width: 10.6%; }  
+    .regTable thead th:nth-child(9) { width: 10.6%; }  
+
+
+    /* 학적 */
+    .stdInfo{
+    border-top: 2px solid #071F4B;
+    border-collapse: collapse;
+    width: 930px;
+    height: auto;
+    table-layout: fixed;
+    box-sizing: border-box;   
+    margin-bottom: 50px;     
+    }
+
+    .point, .stdReport {
+    border-top: 2px solid #071F4B;
+    border-collapse: collapse;
+    width: 930px;
+    height: auto;
+    table-layout: fixed;
+    box-sizing: border-box;
+    }
+
+    .stdReport{
+        margin-bottom: 100px;
+    }
+    .phrase{
+        margin-bottom: 50px;
+        font-weight: 350;
+        font-size: 16px;
+        color: #666;
+        letter-spacing: -0.5px;
+    }
+
+    .stdInfo th{
+        height: 50px;
+        background-color: #f4f8fc;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 550;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+    }
+
+    .status-is-active{
+        color:#198515 ;
+    }
+
+
+
+
+
+
+
+
+    .point thead th:nth-child(1) { width: 12.5%; }  
+    .point thead th:nth-child(2) { width: 12.5%; }  
+    .point thead th:nth-child(3) { width: 12.5%; }  
+    .point thead th:nth-child(4) { width: 12.5%; }  
+    .point thead th:nth-child(5) { width: 12.5%; }  
+    .point thead th:nth-child(6) { width: 12.5%; }  
+    .point thead th:nth-child(7) { width: 12.5%; }  
+    .point thead th:nth-child(8) { width: 12.5%; }  
+    .point thead th:nth-child(9) { width: 12.5%; }  
+    .point thead th:nth-child(10) { width: 12.5%; }  
+
+    .stdReport thead th:nth-child(1) { width: 10%; }  
+    .stdReport thead th:nth-child(2) { width: 10%; }  
+    .stdReport thead th:nth-child(3) { width: 10%; }  
+    .stdReport thead th:nth-child(4) { width: 10%; }  
+    .stdReport thead th:nth-child(5) { width: 10%; }  
+    .stdReport thead th:nth-child(6) { width: 10%; }  
+    .stdReport thead th:nth-child(7) { width: 10%; }  
+    .stdReport thead th:nth-child(8) { width: 10%; }  
+    .stdReport thead th:nth-child(9) { width: 10%; }  
+    .stdReport thead th:nth-child(10) { width: 10%; }  
+
+    
+
+
+/*========= enroll(수강신청) ==========*/
+.course-search {
+  width: 930px;
+  height: 40px;
+  margin: 35px 60px 0 auto; /* left → auto, right → 60px */
+  display: flex;
+  justify-content: flex-end;  /* 오른쪽 정렬 */
+  align-items: center;
+  gap: 10px;
+  border: none;
+}
+
+
+/* 링크 요소 */
+.search-link {
+  width: 150.5px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between; /* 텍스트 왼쪽, 이미지 오른쪽 */
+  align-items: center;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #dedede;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+}
+.search-link img {
+  height: auto;
+}
+
+/* input */
+.search-input {
+  width: 237px;
+  height: 40px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #dedede;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 15px;
+  color: #757575;
+}
+
+/* button */
+.search-btn {
+  width: 70px;
+  height: 40px;
+  background: #3f97f6;
+  border: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+.search-btn:hover {
+  background: #357fce;
+}
+
+.course-table {
+  width: 930px;
+  height: 393px;
+  border-collapse: collapse;
+  border-top: 2px solid #000;
+  margin-top: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* 헤더 */
+.course-table thead th {
+  height: 61px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 행 */
+.course-table tbody td {
+  height: 66px;
+  border-bottom: 1px solid #d8d8d8;
+  vertical-align: middle;
+  padding: 0 8px;
+}
+
+/* 버튼 */
+.apply-btn {
+  width: 37.77000045776367px;
+  height: 29px;
+  background: #092e71;
+  border: none;
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 14px;
+  cursor: pointer;
+}
+.apply-btn:hover {
+  background: #0c3f99;
+}
+
+.pagination {
+  width: 930px;
+  height: 62px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 공통 버튼 */
+.pagination .page-btn,
+.pagination .page-num {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dedede;
+  background: #fff;
+  text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* 현재 페이지 강조 */
+.pagination .page-num.active {
+  background: #3f97f6;
+  border: 1px solid #3f97f6;
+  color: #fff;
+}
+
+
+/*========= enroll-list(수강신청내역) ==========*/
+.course-history-search {
+  width: 930px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;          /* 요소 사이 간격 */
+  border: none;
+  padding: 0;         /* 기본 padding 제거 */
+  margin: 35px 0 0 0; /* 위쪽 마진만 유지, 좌우 0 */
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/* 선택 박스 */
+.select-box {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #dedede;
+  text-decoration: none;
+}
+.select-box.small {
+  width: 50px; /* 학기 선택용 */
+}
+.select-text {
+  font-weight: 350;
+  font-size: 15px;
+  color: #000;
+}
+
+
+/* 텍스트 라벨 */
+.year-label,
+.semester-label {
+  font-weight: 350;
+  font-size: 16px;
+  color: #000;
+}
+
+/* 오른쪽 수강신청내역 합계 */
+.result-count {
+  margin-left: auto; /* 오른쪽 끝 정렬 */
+  margin-right: 30px;
+  font-weight: 700;
+  font-size: 18.7px;
+  color: #000;
+}
+
+.history-table {
+  width: 930px;
+  border-collapse: collapse;
+  border-top: 2px solid #000;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* 헤더 */
+.history-table thead th {
+  height: 85px;
+  background: #FAFAFA;
+  border-bottom: 1px solid #A3A3A3;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* 데이터 행 */
+.history-table tbody td {
+  height: 66px;
+  border-bottom: 1px solid #D8D8D8;
+  vertical-align: middle;
+  padding: 0 8px;
+}
+
+/* 취소 버튼 */
+.cancel-btn {
+  width: 37.77px;
+  height: 29px;
+  background: #942626;
+  border: none;
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-size: 14px;
+  cursor: pointer;
+}
+.cancel-btn:hover {
+  background: #a03434;
+}
