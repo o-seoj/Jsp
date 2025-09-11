@@ -1,0 +1,242 @@
+/* 기본 폰트 정의 */
+@font-face {
+  font-family: 'Noto Sans KR'; /* 사용할 폰트 이름 설정 */
+  font-weight: 300; /* Light 폰트의 두께 */
+  src: local('Noto Sans KR Light'), 
+       url('/fonts/NotoSansKR-Light.woff2') format('woff2'),
+       url('/fonts/NotoSansKR-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 500; /* Medium 폰트의 두께 */
+  src: local('Noto Sans KR Medium'),
+       url('/fonts/NotoSansKR-Medium.woff2') format('woff2'),
+       url('/fonts/NotoSansKR-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: 700; /* Regular 폰트의 두께 */
+  src: local('Noto Sans KR Medium'),
+       url('/fonts/NotoSansKR-Regular.woff2') format('woff2'),
+       url('/fonts/NotoSansKR-Regular.woff') format('woff');
+}
+
+/* 사이드바 */
+main {
+        width: 100%;
+        max-width: 1400px;
+        height: auto;
+        display: flex;
+        margin: 0 auto;
+    }
+
+aside {
+        flex-basis: 15%;
+        flex-grow: 0;
+        height: auto;
+        padding: 25px 30px;
+        background-color: #dadada;
+        
+    }
+
+aside div {
+        margin-bottom: 20px;
+    }
+
+aside img {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 3px;
+        right: 5px;
+        
+    }
+
+aside h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+aside a {
+        font-size: 14px;
+        margin-left: 25px;
+        line-height: 30px;
+        text-decoration: none; /*밑줄제거*/
+        color: #000;
+    }
+
+/* 컨텐츠 최상단 */
+    main .managemain {
+        width: 1130px;
+        height: auto;
+        flex-grow: 1;
+        padding: 20px;
+        padding-right: 0;
+    }
+    main .managemain .top {
+        justify-content: space-between; /* 양 끝으로 정렬 */
+        align-items: center; /* 세로축 중앙 정렬 */
+        height: auto;
+        display: flex;
+        border-bottom: 1px solid #C0C0C0;
+        padding: 1px 0;
+        margin-bottom: 20px;
+    }
+    main .managemain .top h4 {
+        font-size: 25px;
+        font-weight: bold;
+        flex-shrink: 0;
+        margin-bottom: 20px;
+    }
+    
+    /* 사용자 위치 표현 (class=breadcrumb) */
+    main .managemain .top span {
+        font-size: 15px;
+    }
+    main .managemain .breadcrumb .end {
+        color: blue;
+    }
+    main .managemain .breadcrumb span + span::before {
+        content: ">";
+        color: #ccc;
+    }
+
+/* 컨텐츠 전체 레이아웃 */
+main .managemain div h4 {
+        font-size: 18px;
+        color: rgb(72, 72, 241);
+        margin-bottom: 8px;
+    }
+    main .managemain div img {
+        margin-right: 5px;
+    }
+    main .managemain div table {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        border-top: 2px solid black;
+        border-collapse: collapse;
+        margin-bottom: 25px;
+    }
+    main .managemain div table th {
+        padding: 13px;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid #A3A3A3;
+        background-color: #FAFAFA;
+    }
+    main .managemain div table td {
+        padding: 13px;
+        font-size: 16px;
+        border-bottom: 1px solid #cccccc;
+    }
+    main .managemain .con_3_4f {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    main .managemain .con_3_4f .tb {
+        width: 50%;
+        padding: 10px;
+    }
+    main .managemain .con_3_4f .tb td.wait{
+        color: red;
+
+    }
+    main .managemain .con_3_4f .tb td.complete{
+        color: green;
+
+    }
+    .viewarea {
+        display: flex;
+        justify-content: space-between;
+    }
+    .viewarea .vmore{
+        width: 17px;
+        height: 17px;
+        position: relative;
+        top: 10px;
+    }
+
+
+
+/* 인사관리_학생&교수 목록*/    
+    /* 학생*교수 리스트 표 */
+    main .managemain .stdList table tr td.ing {
+        color: green;
+    }
+    main .managemain .stdList table tr td.run {
+        color: red;
+    }
+    main .managemain .stdList table tr td.rest {
+        color: rgb(255, 187, 0);
+    }
+    main .managemain .stdList table tr td.end {
+        color: blue;
+    }
+
+
+/* 게시판류 공통 */
+    /* 검색 */
+    .search {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .input-container {
+        padding: 0 2px;
+    }
+
+    .search-condition {
+        width: 100px; 
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+
+    .search-input {
+        width: 250px; 
+        padding: 8px;
+        border: 1px solid #ccc;
+    }
+
+    .searchbtn a {
+        display: block;
+        padding: 8px 16px;
+        color: #fff;
+        background-color: #2a68b0;
+        border: 1px solid #2a68b0;
+        text-decoration: none;
+    }   
+
+    /* 페이지네이션(Pagination) */
+    .pagebtn {
+        text-align: center;
+    }
+    .pagebtn a {
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        font-size: 15px;
+        border: 1px solid #DEDEDE;
+        box-sizing: border-box;
+        color: #888;
+        text-decoration: none;
+    }
+
+    .pagebtn_R {
+        margin-right: 8px;
+    }
+
+    .pagebtn_L {
+        margin-left: 8px;
+    }
+
+    .pagebtn a:hover {
+        color: #fff;
+        background-color: #1a528e;
+    }

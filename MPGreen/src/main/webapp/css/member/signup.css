@@ -1,0 +1,158 @@
+/* 하얀 배경을 화면 전체에 깔아주는 역할 */
+.form-wrapper {
+    min-width: 990px;
+    background-color: white;
+    padding: 50px 0; /* body에서 가져온 위아래 여백 */
+}
+
+/* 회원가입 폼을 감싸는 전체 공간 */
+.signup-form-container {
+    width: 990px;
+    /* margin: 0 auto; 로 중앙 정렬 */
+    margin: 0 auto;
+}
+
+/* 1. 상단 제목 영역 */
+.form-header {
+    padding: 20px 0;
+}
+.form-header h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3F97F6;
+}
+.form-header p {
+    font-size: 14px;
+    color: #3F97F6;
+    line-height: 1.5;
+}
+
+/* 2. 입력 필드 전체 영역 */
+.form-fields {
+    width: 990px;
+    border-top: 2px solid rgba(7, 31, 75, 1);
+}
+
+/* 각 입력 줄(row)의 스타일 */
+.form-row {
+    display: flex; /* 라벨과 입력칸을 가로로 배치 */
+    border-bottom: 1px solid rgba(222, 222, 222, 1); /* 테두리를 row 단위로 적용 */
+}
+
+/* 왼쪽 라벨 스타일 */
+.form-label {
+    width: 198px;
+    min-height: 65px;
+    background: rgba(244, 248, 252, 1);
+    border-style: solid;
+    border-color: rgba(222, 222, 222, 1);
+    /* 테두리: 위 오른쪽 아래 왼쪽 */
+    border-width: 0 1px 0 0;
+    
+    /* 폰트 및 정렬 */
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    
+    display: flex;
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;   /* 세로 중앙 */
+}
+
+/* 오른쪽 입력칸 영역 스타일 */
+.form-input {
+    flex-grow: 1; /* 남은 공간 모두 차지 */
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
+
+/* 입력칸(input) 공통 스타일 */
+.text-input {
+    width: 308.8px;
+    height: 39px;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(204, 204, 204, 1);
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.text-input:focus {
+    outline: 1px solid #007bff;
+}
+
+.form-input span {
+    margin-left: 15px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* 주소 필드 스타일 */
+.address-row .form-input {
+    padding: 12.5px 10px;
+    align-content: center;
+}
+.address-input-group {
+    display: flex;
+    margin-bottom: 10px;
+}
+.address-input-group .text-input {
+    width: 150px;
+    margin-right: 10px;
+}
+.address-input-group button {
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    padding: 0 15px;
+    cursor: pointer;
+    height: 39px;
+}
+.address-row .form-input .text-input {
+    width: 100%;
+}
+.address-row .form-input .text-input:not(:last-child) {
+        margin-bottom: 10px;
+}
+
+/* 필수입력(*) 글자 스타일 */
+.required {
+    color: red;
+    margin-left: 2px;
+}
+
+.required-info {
+    text-align: right;
+    padding: 15px 0;
+    font-size: 13px;
+}
+
+/* 3. 하단 버튼 영역 */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+.form-actions button {
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 8px;
+}git pull origin main
+
+.cancel-btn {
+    width: 56px;
+    background: rgba(139, 139, 139, 1);
+}
+
+.signup-btn {
+    width: 92px;
+    background: rgba(63, 151, 246, 1);
+}

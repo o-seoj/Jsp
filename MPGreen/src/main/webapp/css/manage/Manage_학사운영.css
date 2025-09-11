@@ -1,0 +1,164 @@
+/* 등록 */
+    /* 소제목 */
+    main .managemain form.register h4{
+        font-size: 20px;
+        height: auto;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        margin-top: 15px; 
+        margin-bottom: 15px;
+    }
+
+    /* 기본 테이블 스타일 */
+    .basic {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .basic tr td.mid {
+        text-align: center;
+        vertical-align: middle;
+    }
+        /* 첫 행의 경계선 설정 */
+    .basic tr:first-child th,
+    .basic tr:first-child td {
+        border-top: 3px solid gray;
+    }
+    /* 테이블 스타일 */ 
+    .basic th,
+    .basic td {
+        border-right: 2px solid #ccc;
+        border-left: 2px solid #ccc;
+    }
+    .basic th {
+    }
+    .basic td {
+    }
+    
+    main .managemain form.register th,
+    main .managemain form.register td{
+        border-bottom: 1px solid #ccc;
+    }
+    main .managemain form.register th{
+        font-size: 14px;
+        font-weight: bold;
+        height: auto;
+        width: 15%;
+        background-color: #f1f1f1;
+
+    }
+    main .managemain form.register td{
+        text-align: left;
+    }
+        /* 가운데 정렬 필요한 것들 */
+    main .managemain form.register td.mid{
+        text-align: center;
+        vertical-align: middle;
+    }
+    main .managemain form.register p{
+        font-size: 14px;
+        margin: 5px;
+        color: red;
+    }
+
+
+
+
+
+/* 공통 요소 */
+    /* 드롭다운 박스 스타일 */
+    .basic td select{
+        width: 45%; /* 원하는 너비로 조절 */
+        height: 40px; /* 높이 조절 */
+        margin: 5px;
+        padding: 3px; /* 내부 여백 추가 */
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    /* 버튼 */
+    main .managemain form.register .button {
+        width: 100px;
+        margin-left: auto;
+        display: block;
+        margin-top: 20px;
+        background-color: #2b5993;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* input박스 스타일  */
+    main .managemain input {
+        width: 60%;
+        height: 10%;
+        font-size: 14px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid #ccc; /* 테두리 스타일 */
+        box-sizing: border-box;
+    }
+        /* input박스 스타일(우편번호)  */
+    main .managemain input.postNum {
+        display: flex; /* 버튼<br> 추가하면 삭제 ㄱㄱ*/
+        width: 23.7%;
+    }
+        /* input박스 스타일(대학 소개)  */
+    main .managemain input.uniIntro {
+        display: flex;
+        width: 50%;
+    }
+    main .managemain input.fileSel {
+        display: flex;
+        width: 30%;
+    }
+
+
+        /* 수업 기간&시간 input */
+    main .managemain input.period {
+        width: 200px;
+    }
+
+        /* 강의설명 box */
+    .explain {
+        width: 50%;
+        height: 150px; /* 원하는 높이로 조절 */
+        margin: 5px;
+        padding: 5px; /* 내부 여백 */
+        border: 1px solid #ccc; /* 테두리 스타일 */
+        font-size: 14px;
+        box-sizing: border-box;
+        resize: none; /* 사용자가 크기를 조절하지 못하게 고정 */
+    }
+    
+        /* 수업 시간 요일 체크박스 설정 */
+    .time-and-days {
+        display: flex;
+        align-items: center; /* 세로 중앙 정렬 */
+        gap: 20px; /* 시간 입력 그룹과 체크박스 그룹 사이의 간격 */
+    }
+
+        /* 기존 체크박스 그룹 스타일은 그대로 유지 */
+    .day-checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* 각 체크박스 간의 간격 */
+    }
+
+        /* 추가로, input 태그의 폰트 사이즈를 조정하여 글자가 잘 보이게 할 수 있습니다. */
+    .time-and-days input[type="time"] {
+        font-size: 16px;
+        padding: px;
+    }
+        /* radio 체크 설정 */
+    main .managemain form.register div.radio {
+        display: flex; 
+        gap: 15px; 
+        align-items: center;
+    }
+    main .managemain form.register div.radio label{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+

@@ -1,0 +1,169 @@
+/* 전체 레이아웃 (Layout ㅣ 전체 페이지) */
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* 로그인 폼 영역 (Form → Fieldset / Layout ㅣ선택창) */
+.login-form {
+    width: 495px;
+}
+
+/* LOGIN ㅣ제목 */
+.login-title {
+    font-size: 20px;
+    font-weight: 500; /* Medium */
+    color: #3F97F6;
+    margin: 0;
+    line-height: 24px;
+}
+
+/* 코멘트 (로그인을 하시면... ㅣ 코멘트) */
+.login-comment {
+    font-size: 15px;
+    font-weight: 350; /* DemiLight (가장 비슷한 300 또는 400 사용) */
+    color: #3F97F6;
+    margin-top: 5px; /* 제목과의 간격 */
+    margin-bottom: 25px; /* 다음 요소와의 간격 */
+    line-height: 24px;
+}
+
+/* 상단 영역 (role 선택, 아이디/비밀번호 찾기) */
+.form-header {
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝으로 정렬 */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* role 선택 그룹 */
+.role-selector {
+    display: flex;
+    gap: 15px; /* 각 항목 사이 간격 */
+}
+
+.role-selector label {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* 기본 라디오 버튼 숨기기 */
+.role-selector input[type="radio"] {
+    display: none;
+}
+
+/* 커스텀 라디오 버튼 모양 만들기 (role 체크 모양) */
+.role-selector label::before {
+    content: '';
+    display: inline-block;
+    width: 18px; /* 명세: 22px */
+    height: 18px;
+    margin-right: 8px;
+    border-radius: 50%; /* 원 모양 */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+/* 선택됐을 때 커스텀 라디오 버튼 스타일 */
+.role-selector input[type="radio"]:checked + label::before {
+    background-color: #3F97F6;
+    border-color: #3F97F6;
+}
+
+.find-link a {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+}
+
+/* 아이디, 비밀번호 입력 칸 */
+.input-field {
+    width: 100%; /* 부모 너비에 맞춤 */
+    height: 47px;
+    border: 1px solid #CCCCCC;
+    background: #FFFFFF;
+    padding: 0 15px; /* 안쪽 여백 */
+    font-size: 14px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* 패딩, 테두리를 너비에 포함 */
+}
+
+/* 입력창 플레이스홀더 스타일 */
+.input-field::placeholder {
+    color: #999;
+}
+
+/* 로그인 클릭 칸 */
+.login-button {
+    width: 100%;
+    height: 48px;
+    background-color: #3F97F6;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer; /* 마우스 올리면 손가락 모양으로 */
+    margin-top: 10px;
+}
+
+/* 하단 안내 영역 */
+.info-section {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.info-icon {
+    margin-right: 8px;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.info-title-group {
+    display: flex;
+    align-items: center;
+}
+
+.info-header h2 {
+    position: relative; /* 가상 요소의 위치 기준 */
+    padding-left: -20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #145074;
+    margin: 0;
+}
+
+.info-header .signup-link a {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 100px ;
+}
+
+.info-list {
+    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* 리스트 항목 앞에 '-' 붙이기 */
+.info-list li::before {
+    content: '- ';
+}

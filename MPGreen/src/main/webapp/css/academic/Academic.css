@@ -1,0 +1,482 @@
+    /* board 레이아웃 */
+    .board{
+        flex-direction: column;
+    }
+    
+    /* board 본문 레이아웃 */
+    .boardLower{
+        width: 100%;
+        height: auto;
+    }
+
+    /* 상단바 전체 */
+    .top-bar {
+    position: relative;
+    width: 100%;
+    height: 42px;
+    background-color: rgba(236,242,246,1);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    box-sizing: border-box;
+        position: relative; 
+    }
+
+    .top-bar-content {
+    width: 1200px;       /* 고정 폭 */
+    display: flex;
+    justify-content: flex-end;
+    gap: 14.6px;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;      /* 좌우 중앙 정렬 */
+    }
+
+    /* 상단바 텍스트 */
+    .sidebar-text {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 350;
+        font-style: DemiLight;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #000;
+    }
+
+
+/* 게시판 공통 */
+.searchingField{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    justify-content: flex-end;
+}
+
+.searchingField select{
+    width: 150px;
+    height: 40px;
+    padding: 6px;
+    margin-right: 5.6px;
+    border: 1px solid #ccc;
+}
+.searchingField input{
+    width: 237px;
+    height: 40px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.searchingField button{
+    width: 70px;
+    height: 40px;
+    padding: 6px 12px;
+    background-color: #3F97F6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    height: 237px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-top: 2px solid #000;
+}
+
+thead{
+    height: 61px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #a3a3a3;
+}
+tbody td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: center;  
+    font-size: 14px;
+}
+
+.page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top: 30px;
+    margin-bottom: 100px;      
+    gap:24px;               
+}
+
+.page > .prev,
+.page > .pagenumber,
+.page > .last{
+    display:flex;
+    align-items:center;
+    gap:4px;               
+}
+
+
+.page .pagenumber a{
+    display:inline-flex;              
+    justify-content:center;
+    align-items:center;
+    width:32px;
+    height:29px;
+    border:1px solid #dcdcdc;
+    background:#fff;
+    color:#333;
+    text-decoration:none;
+    box-sizing:border-box;
+    line-height:1;  
+    font-weight: 350;
+    font-size: 15px;
+}
+
+
+.page .pagenumber a.active{
+    background:#3F97F6;
+    border-color:#3F97F6;
+    color:#fff;
+}
+
+.page .prev a,
+.page .last a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:32px;
+    height:32px;
+    border:1px solid #dcdcdc;
+    background:#fff;
+    box-sizing:border-box;
+}
+.page a.paging img{
+    display:block;
+    max-width:18px;  
+    max-height:18px;
+}
+
+.ask{
+    width: 110px;
+    height: 42px;
+    margin-left: 820px;
+    font-weight: 350;
+    font-size: 16px;
+    background-color: #3F97F6;
+    color: #fff;
+    border: 1px solid #3F97F6;
+    border: none;
+    cursor: pointer;
+}
+
+/* consult */
+
+
+.consult-board thead th:nth-child(1) { width: 10%; }  
+.consult-board thead th:nth-child(2) { width: 15%; }  
+.consult-board thead th:nth-child(3) { width: 40%; }  
+.consult-board thead th:nth-child(4) { width: 10%; }  
+.consult-board thead th:nth-child(5) { width: 10%; } 
+.consult-board thead th:nth-child(6) { width: 15%; } 
+
+
+.consult-board tbody td:nth-child(3){
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: none;
+  padding-left: 0;         
+}
+
+.consult-board tbody tr:nth-child(-n+3) td:nth-child(3) {
+    background: url(../../images/ico-lock.png) no-repeat left center;
+    padding-left: 22px;
+}
+.consult-board tbody .undone {
+    color:#ff0000 ;
+}
+
+.consult-board tbody .done {
+    color: #008000;
+}
+
+/* notice */
+.notice-board{
+  width: 100%;
+  table-layout: fixed;
+}
+
+.notice-board thead th:nth-child(1) { width: 8.6%; }  
+.notice-board thead th:nth-child(2) { width: 52.7%; }  
+.notice-board thead th:nth-child(3) { width: 18.2%; }  
+.notice-board thead th:nth-child(4) { width: 13%; }  
+.notice-board thead th:nth-child(5) { width: 7.5%; }  
+
+.notice-board tbody td:nth-child(2){
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: none;
+  padding-left: 0;         
+}
+
+.notice-board tbody tr:nth-child(-n+2) td:nth-child(2) {
+    background: url(../../images/ico-new01.gif) no-repeat left center;
+    padding-left: 22px;
+}
+/* ========== faq 레이아웃 ========== */
+
+.text-with-icon {
+  width: 930px;                /* 너비 */
+  padding-top: 40px;                /* 높이 */
+  color: #145074;         /* 배경색 */
+  display: flex;               /* 이미지와 텍스트 가로 배치 */
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-style: medium;
+  font-size: 18px;
+  letter-spacing: 0;
+  opacity: 1;
+  margin-bottom: 9px;
+}
+
+.text-with-icon .icon {
+  margin-right: 8px;           /* 이미지와 텍스트 간 간격 */
+}
+
+
+
+.table-container {
+  width: 930px;
+  border-top: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* row가 폭 전체 사용 */
+}
+
+
+.table-row {
+  width: 930px;
+  height: 67px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.row-content {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.row-box {
+  width: 30px;
+  height: 30px;
+  background: #3282D3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-style: DemiLight;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.row-text {
+  width: 930px;
+  height: 18px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-style: DemiLight;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #333333;
+  padding-left: 8px;
+}
+
+
+/* 답변 row(A) */
+.answer-row .row-box {
+  background: #999999; /* 연한 회색, 예시 */
+}
+
+.answer-row {
+  background : #EFEFEF;
+
+}
+
+/* 답변 row 숨김 설정 방법
+.answer-row {
+    display: none;
+}
+*/
+
+
+
+/* ========== graduation 레이아웃 ========== */
+
+.completion-table {
+  width: 930px;
+  height: 368px;
+  border-top: 2px solid #071F4B;
+   border-collapse: separate; /* 셀 간격 적용 가능하게 변경 */
+  border-spacing: 2px;       /* 셀 간격 2px */
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  opacity: 1;
+}
+.completion-table th,
+.completion-table td {
+  background-clip: padding-box;
+  border: none; /* border 제거 */
+  padding: 10px;
+}
+.completion-table th {
+  border-style: solid;
+  border-color: #DEDEDE;
+  border-width: 0 1px 1px 0;
+  padding: 10px 5px;
+  background-color: #F4F8FC; /* 헤더와 속성셀 배경색 */
+}
+
+.completion-table td {
+  border-style: solid;
+  border-color: #DEDEDE;
+  border-width: 0 1px 1px 0;
+  padding: 10px 5px;
+  background-color: transparent; /* 데이터 셀 배경 없음 */
+}
+.col-section {
+  width: 276.19px;
+  height: 102px;
+}
+
+.col-total {
+  width: 91.39px;
+  height: 102px;
+  border-image-source: linear-gradient(41.86deg, #DEDEDE 52.74%, #DFDFDF 52.74%);
+}
+
+.col-completion {
+  width: 138.60499572753906px; /* 554.42 / 4 */
+  height: 50px; /* 수료학점 헤더 높이 */
+}
+
+.completion-table tbody td {
+  height: 67px; /* 1~4학년 행 높이 */
+}
+
+/* 조기졸업표 테이블 */
+.early-graduation-table {
+  width: 930px;
+  border-top: 2px solid #071F4B;
+  border-collapse: separate;
+  border-spacing: 2px; /* 셀 간격 2px */
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  opacity: 1;
+}
+
+.early-graduation-table th,
+.early-graduation-table td {
+  border-style: solid;
+  border-color: #DEDEDE;
+  border-width: 0 1px 1px 0;
+  padding: 10px 5px;
+  vertical-align: middle;
+}
+
+.early-graduation-table th {
+  background-color: #F4F8FC; /* 헤더/속성 셀 배경 */
+}
+
+.early-graduation-table td {
+  background-color: transparent; /* 데이터 셀 배경 없음 */
+}
+
+/* 속성셀 너비/높이 */
+.col-qualification {
+  width: 648px;
+  height: 50px;
+  background-color: #F4F8FC;
+}
+
+.col-semester {
+  width: 276px;
+  height: 50px;
+  background-color: #F4F8FC;
+}
+
+.col-gpa,
+.col-credits {
+  width: 184px;
+  height: 50px;
+  background-color: #F4F8FC;
+}
+
+.col-procedure {
+  width: 276px;
+  height: 102px;
+  background-color: #F4F8FC;
+}
+
+/* 졸업표 테이블 */
+.graduation-table {
+  width: 930px;
+  border-top: 2px solid #071F4B;
+  border-collapse: separate;
+  border-spacing: 2px; /* 셀 간격 2px */
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.graduation-table th,
+.graduation-table td {
+  border-style: solid;
+  border-color: #DEDEDE;
+  border-width: 0 1px 1px 0;
+  padding: 10px 5px;
+  vertical-align: middle;
+  background-color: #F4F8FC; /* 속성셀 배경 */
+}
+
+.graduation-table td.data-cell {
+  background-color: transparent; /* 데이터셀은 배경 없음 */
+}
+
+/* 열 너비/높이 정의 */
+.col-college { width: 276.78px; height: 106px; }
+.col-total-credits { width: 137.38999938964844; height: 106px; }
+.col-major { width: 276.78px; height: 106px; }
+.col-double-major, .col-single-major { width: 137.39px; height: 54px; }
+.col-minor { width: 229.05px; height: 54px; }
+
+/* 데이터행 높이 */
+.graduation-table tbody td {
+  height: 67px;
+}
+
+
+
+.explanation-text {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 350;
+  font-style: normal; /* DemiLight는 font-weight로 표현 */
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  vertical-align: middle;
+  color: #666666;
+}

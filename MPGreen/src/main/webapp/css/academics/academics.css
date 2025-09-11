@@ -1,0 +1,165 @@
+    /* board 레이아웃 */
+    .board{
+        flex-direction: column;
+    }
+    
+    /* board 본문 레이아웃 */
+    .boardLower{
+        width: 100%;
+        height: auto;
+    }
+
+    .sbTitle{
+        width: auto;
+    }
+    /*========== 상단 바  ==========*/
+    /* 상단바 전체 */
+    .top-bar {
+    position: relative;
+    width: 100%;
+    height: 42px;
+    background-color: rgba(236,242,246,1);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    box-sizing: border-box;
+        position: relative; 
+    }
+
+    .top-bar-content {
+    width: 1200px;       /* 고정 폭 */
+    display: flex;
+    justify-content: flex-end;
+    gap: 14.6px;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;      /* 좌우 중앙 정렬 */
+    }
+
+    /* 상단바 텍스트 */
+    .sidebar-text {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 350;
+        font-style: DemiLight;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #000;
+    }
+
+
+    /* 사범대학 */
+.collegeContainer img{
+    width: 320px;
+    height: 240px;
+}
+
+.collegeContainer{
+    width:930px;
+    height: 290px;
+    display: flex;
+    margin-top: 30px;
+}
+.collegeArticle{
+    margin-left: 24.09px;
+}
+
+.college {
+    width: auto;
+    font: 16px 350;
+    color:  #5b6774;
+    margin: 0;
+}
+
+.collegeTitle{
+    font-size: 26px;
+    font-weight: 350;
+    color: #3b88d4;
+    margin: 15px 0 17px 0;
+}
+
+.collegeText{
+    font-size: 16px;
+    font-weight: 350;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    margin: 0;
+    color: #666666;
+}
+
+.tableHeader{
+    width: 930px;
+    height: 24px;
+    display: flex;
+    margin-bottom: 27px;
+}
+
+.tableHeader h4{
+    margin: 0;
+    background: url(../../images/bullet-h4.png) no-repeat left center;
+    padding-left: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    display: inline-block;
+    color: #145074;
+}
+
+.majorTable{
+    border-top: 2px solid #071F4B;
+    border-collapse: collapse;
+    width: 930px;
+    height: auto;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+thead th{
+    height: 50px;
+    background-color: #f4f8fc;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+tbody td {
+    border-bottom: 1px solid #ddd;
+    height: 50px;
+    padding: 12px 10px;
+    text-align: center;  
+    font-size: 14px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 350;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+
+/* 셀 내부에만 선 */
+.majorTable th,
+.majorTable td {
+  border-bottom: 1px solid #dedede;   /* 가로줄 */
+  border-right: 1px solid #dedede;    /* 세로줄 */
+}
+
+/* 마지막 행/열은 선 제거 (겉선 없애기) */
+.majorTable th:last-child,
+.majorTable td:last-child {
+  border-right: none;
+}
+
+.majorTable thead th:nth-child(1) { width: 26.8%; }  
+.majorTable thead th:nth-child(2) { width: 26.8%; }  
+.majorTable thead th:nth-child(3) { width: 26.8%; }  
+.majorTable thead th:nth-child(4) { width: 19.6%; }  
+tbody > tr > td> a{
+    margin-left: 5.69px;
+}
+
+

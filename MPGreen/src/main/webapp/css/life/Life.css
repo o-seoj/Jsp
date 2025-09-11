@@ -1,0 +1,277 @@
+/* =========================
+   Life 공통
+========================= */
+.page-life .boardUpper{
+  width: calc(100% - 60px);
+  margin: 62px 0 0 60px;
+  border-bottom: 2px solid #111;
+  box-sizing: border-box;
+}
+.page-life .buText{ margin:0 0 14px; font-size:28px; font-weight:700; }
+
+.page-life .life-wrap{
+  width: calc(100% - 60px);
+  margin-left: 60px;
+}
+
+/* 소개문 */
+.page-life .life-brief{
+  background:#f7f9fc;
+  border:1px solid #e5e9f0;
+  border-radius:8px;
+  padding:16px 18px;
+  line-height:1.6;
+  margin-bottom:16px;
+}
+
+/* 정보 표 */
+.page-life .life-table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  font-size:14px;
+  border:1px solid #e8ebef;
+  border-radius:8px;
+  overflow:hidden;
+}
+.page-life .life-table th,
+.page-life .life-table td{
+  border-bottom:1px solid #e8ebef;
+  padding:14px 16px;
+  vertical-align:middle;
+}
+.page-life .life-table tr:last-child th,
+.page-life .life-table tr:last-child td{ border-bottom:none; }
+.page-life .life-table .col-head{ width:140px; }
+.page-life .life-table th{
+  background:#fafafa;
+  color:#333;
+  text-align:left;
+  font-weight:700;
+}
+
+/* 카드 */
+.page-life .life-cards{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap:14px;
+  margin:18px 0;
+}
+.page-life .life-card{
+  background:#fff;
+  border:1px solid #e8ebef;
+  border-radius:12px;
+  padding:18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+.page-life .life-card h4{
+  margin:0 0 8px;
+  font-size:16px;
+  font-weight:800;
+}
+.page-life .life-card p{ margin:0; line-height:1.6; color:#444; }
+
+/* 안내 */
+.page-life .life-note{
+  margin:10px 0 24px;
+  font-size:14px;
+  color:#666;
+}
+
+/* 반응형 */
+@media (max-width:1024px){
+  .page-life .life-cards{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width:640px){
+  .page-life .life-cards{ grid-template-columns: 1fr; }
+  .page-life .life-table .col-head{ width:110px; }
+}
+
+/* 대학생활 페이지 전용 보정 */
+.page-life .sidebar { width: 230px; }               /* 필요시 220~240px에서 조절 */
+
+.page-life .sidebar .item { min-height: 56px; }     /* 한 줄 높이 보장 */
+
+.page-life .sidebar .item .itemText{
+  display: block;
+  width: auto;                 /* ← 고정폭 100px 덮어쓰기 */
+  margin: 18px 12px 0 20px;
+  white-space: nowrap;         /* 줄바꿈 금지 */
+  overflow: hidden;
+  text-overflow: ellipsis;     /* 넘치면 … */
+}
+
+/* hover 시 글자색 유지 */
+.page-life .sidebar .item:hover .itemText { color: #fff; }
+
+
+/* 대학생활 페이지 사이드바 - active 상태 글씨 색 보정 */
+.page-life .sidebar .item.active {
+  background: #3F97F6;    /* 파란 배경 */
+  border-color: #3F97F6;
+}
+
+.page-life .sidebar .item.active .itemText {
+  color: #fff !important; /* 흰 배경이면 여기만 다른 색으로 */
+}
+
+/* hover 시에도 글자가 안 사라지게 */
+.page-life .sidebar .item:hover .itemText {
+  color: #fff;
+}
+
+
+/* 그리드 카드 */
+.life-cards--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+@media (max-width: 1024px) {
+  .life-cards--grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .life-cards--grid { grid-template-columns: 1fr; }
+}
+
+/* 소제목 */
+.life-sec-title { margin: 24px 0 12px; font-weight: 700; font-size: 18px; }
+
+/* 메타 텍스트 */
+.life-meta { color:#666; font-size: 13px; }
+
+/* 단계 인포 */
+.life-steps { display:flex; gap:12px; flex-wrap:wrap; }
+.life-step { flex:1 1 200px; border:1px solid #e5e8ef; border-radius:8px; padding:12px; background:#fff; }
+
+/* FAQ */
+.life-faq details { border:1px solid #e5e8ef; border-radius:8px; padding:10px 12px; margin-bottom:8px; background:#fff; }
+.life-faq summary { cursor:pointer; font-weight:600; }
+
+
+/* ---- clubs(동아리/스터디) 제목 줄바꿈/잘림 이슈 해결 ---- */
+.page-life .boardUpper{
+  height: auto;            /* 고정 높이 제거 */
+  padding: 12px 0;         /* 자연스러운 위아래 여백 */
+  border-bottom: 2px solid #111;
+}
+
+.page-life .buText{
+  width: auto !important;  /* 고정 폭 해제 */
+  height: auto !important; /* 고정 높이 해제 */
+  margin: 0;               /* 불필요 여백 정리 */
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;     /* 제목을 한 줄로 유지(원하면 normal로 바꿔도 됨) */
+}
+
+
+/* 식단안내 전용 보조 스타일 */
+.page-life .life-meal .meal-header{
+  display:flex; align-items:center; justify-content:center;
+  gap:24px; margin:22px 0 16px;
+}
+.page-life .life-meal .meal-range{
+  font-size:32px; font-weight:700; color:#214c86;
+}
+.page-life .life-meal .meal-nav{
+  width:40px; height:40px; border:1px solid #dbe3ee; background:#fff;
+  border-radius:8px; font-size:20px; cursor:pointer;
+}
+
+.page-life .life-meal .meal-table{
+  width:100%; border-collapse:collapse; background:#fff; table-layout:fixed;
+  border-top:3px solid #0f2a49;
+}
+.page-life .life-meal .meal-table thead th{
+  background:#173b6c; color:#fff; padding:14px 10px; font-weight:700; text-align:center;
+}
+.page-life .life-meal .meal-table th,
+.page-life .life-meal .meal-table td{
+  border:1px solid #dbe3ee; vertical-align:top; padding:16px 14px; font-size:14px;
+}
+.page-life .life-meal .meal-type{ text-align:center; background:#f8fbff; font-weight:700; }
+.page-life .life-meal .price-badge{
+  display:inline-block; border:2px solid #3F97F6; color:#2f6fb3; padding:4px 10px; border-radius:6px;
+  margin-bottom:10px; font-weight:700; font-size:14px; background:#fff;
+}
+.page-life .life-meal .menu ul{ margin:0; padding:0; list-style:none; }
+.page-life .life-meal .menu li{ line-height:1.6; }
+.page-life .life-meal .center{ text-align:center; }
+.page-life .life-meal .mute{ color:#888; }
+.page-life .life-meal .meal-note{ margin:14px 0 0; color:#6f7b8a; }
+
+/* ===== 갤러리 ===== */
+/* =========================
+   Gallery (대학생활 > 갤러리)
+   ========================= */
+.page-life.gallery .gallery-intro{
+  margin: 16px 0 22px;
+  color:#666;
+  font-size:14px;
+}
+
+/* 3열 그리드 */
+.page-life.gallery .gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* 카드 */
+.page-life.gallery .gallery-card{
+  border:1px solid #e8ebef;
+  border-radius:8px;
+  overflow:hidden;
+  background:#fff;
+}
+
+/* 썸네일: 동일 높이 + 잘라내기 */
+.page-life.gallery .gallery-card .thumb{
+  width:100%;
+  height:220px;              /* 썸네일 높이 */
+  display:block;
+  object-fit:cover;          /* 비율 유지한 채 잘라내기 */
+}
+
+/* 본문(제목/메타) */
+.page-life.gallery .gallery-card .body{
+  padding:12px 14px;
+}
+.page-life.gallery .gallery-card .title{
+  font-weight:600;
+  font-size:15px;
+  color:#222;
+  margin:0 0 8px 0;
+  line-height:1.4;
+}
+.page-life.gallery .gallery-card .meta{
+  display:flex;
+  gap:12px;
+  font-size:12px;
+  color:#6b7280;
+}
+
+/* 호버 효과(살짝 확대) */
+.page-life.gallery .gallery-card:hover .thumb{
+  transform:scale(1.02);
+  transition:transform .25s ease;
+}
+
+/* 반응형: 태블릿 2열, 모바일 1열 */
+@media (max-width: 1024px){
+  .page-life.gallery .gallery-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px){
+  .page-life.gallery .gallery-grid{
+    grid-template-columns: 1fr;
+  }
+  .page-life.gallery .gallery-card .thumb{
+    height:200px;
+  }
+}
+
+
